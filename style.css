@@ -1,0 +1,391 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0d1117;
+  color:#e6edf3;
+  transition:.35s;
+}
+
+body.light-theme {
+  background: #ffffff;
+  color: #111;
+}
+
+body.light-theme header {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body.light-theme nav a {
+  color: #222;
+}
+
+body.light-theme .card {
+  background: #f6f8fa;
+  border: 1px solid #e5e7eb;
+  color: #111;
+}
+
+body.light-theme #skills .skills-grid .skill {
+  background: #f6f8fa !important; 
+  border: 1px solid #e5e7eb !important; 
+  color: #111 !important;
+}
+
+/* Heading inside skill */
+body.light-theme #skills .skills-grid .skill h4 {
+  color: #111 !important;
+}
+
+body.light-theme #skills .skills-grid .skill-bar {
+  background: #e0e0e0 !important;
+}
+
+body.light-theme #skills .skills-grid .skill-bar div {
+  background: linear-gradient(90deg,#238636,#56d364) !important;
+}
+
+body.light-theme .contact-links a {
+  background: #f6f8fa;
+  color: #111;
+  border: 1px solid #e5e7eb;
+}
+
+body.light-theme .contact-links a:hover {
+  border: 1px solid #238636;
+  background: #e6f3e8;
+  color: #111;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  width:100%;
+  padding:18px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(13,17,23,.65);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+  z-index:1000;
+}
+
+header h1{
+  font-weight:700;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+nav a{
+  color:#9da6af;
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+  transition:.3s;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  bottom:-5px;
+  left:0;
+  background:#238636;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:white;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* BUTTON */
+#themeToggle{
+  background:linear-gradient(135deg,#238636,#2ea043);
+  border:none;
+  padding:9px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  color:white;
+}
+
+/* HERO */
+.hero{
+  padding:160px 20px 80px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:48px;
+  font-weight:800;
+  background:linear-gradient(90deg,#2ea043,#56d364);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  color:#9da6af;
+  margin:15px 0;
+}
+
+/* BUTTON */
+.btn{
+  background:linear-gradient(135deg,#238636,#2ea043);
+  padding:12px 25px;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  display:inline-block;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* SECTION */
+section{
+  padding:80px 40px;
+}
+
+section h2{
+  margin-bottom:25px;
+}
+
+/* GRID */
+.project-grid,
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:rgba(22,27,34,.7);
+  padding:18px;
+  border-radius:14px;
+  text-decoration:none;
+  color:inherit;
+  border:1px solid rgba(255,255,255,.05);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border:1px solid #2ea043;
+}
+
+/* VIDEO */
+.video-container{
+  overflow:hidden;
+  border-radius:10px;
+}
+
+.video-container video{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+/* SKILLS */
+.skill{
+  background:#161b22;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+.skill h4{
+  margin-bottom:10px;
+}
+
+.skill-bar{
+  background:#30363d;
+  height:10px;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.skill-bar div{
+  height:100%;
+  background:linear-gradient(90deg,#238636,#56d364);
+}
+
+/* CONTACT (FIXED) */
+.contact-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-width:400px;
+}
+
+.contact-links a{
+  display:flex;              /* ✅ align icon + text */
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  background:#161b22;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+  border:1px solid rgba(255,255,255,.05);
+  transition:.3s;
+}
+
+.contact-links a:hover{
+  border:1px solid #2ea043;
+  transform:translateX(5px);
+}
+
+/* ✅ ROBLOX ICON FIX */
+.roblox-icon{
+  width:18px;
+  height:18px;
+  object-fit:contain;
+  border-radius:4px;
+  flex-shrink:0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#8b949e;
+}
+
+/* ANIMATION (FIXED NO SHIFT) */
+.fade-left,
+.fade-right{
+  opacity:0;
+  transform:translateY(40px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-left.show,
+.fade-right.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MENU BUTTON (HIDDEN ON DESKTOP) */
+#menuToggle{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* NAV LINKS WRAPPER */
+.nav-links{
+  display:flex;
+  gap:25px;
+  transition: all 0.3s ease;
+}
+
+/* MOBILE NAV */    
+@media (max-width: 768px){
+
+  #menuToggle{
+    display:block;
+  }
+
+  nav{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#0d1117;
+
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+
+    padding:20px 0;
+
+    transform:translateY(-120%);
+    opacity:0;
+    pointer-events:none;
+
+    transition: all 0.3s ease;
+  }
+
+  /* SHOW MENU */
+  .nav-links.active{
+    transform:translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+
+  .nav-links a{
+    font-size:16px;
+    transition: all 0.3s ease;
+  }
+}
+
+/* TABLET */
+@media (max-width: 1024px){
+  header{
+    padding:15px 25px;
+  }
+
+  section{
+    padding:70px 25px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+
+  header{
+    flex-direction:column;
+    gap:10px;
+    padding:15px;
+  }
+
+  .hero{
+    padding-top:140px;
+  }
+
+  .hero h2{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .project-grid,
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:60px 20px;
+  }
+}

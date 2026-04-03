@@ -1,0 +1,66 @@
+// Theme toggle
+const themeBtn = document.getElementById("themeToggle");
+
+themeBtn.onclick = () => {
+  document.body.classList.toggle("light-theme");
+
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("light-theme") ? "light" : "dark"
+  );
+};
+
+// Load theme
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-theme");
+}
+
+// ✅ FADE IN + OUT (LEFT & RIGHT)
+const elements = document.querySelectorAll(".fade-left, .fade-right");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+
+// Skill bars
+window.addEventListener("load", () => {
+  document.querySelectorAll(".skill-bar").forEach(bar => {
+    const fill = document.createElement("div");
+    fill.style.width = bar.dataset.skill;
+    bar.appendChild(fill);
+  });
+});
+
+// Video hover
+document.querySelectorAll(".video-card").forEach(card => {
+  const video = card.querySelector("video");
+
+  card.addEventListener("mouseenter", () => video.play());
+  card.addEventListener("mouseleave", () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+
+// ✅ MOBILE MENU
+const menuBtn = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.onclick = () => {
+  navLinks.classList.toggle("active");
+};
+
+// Close on click
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
