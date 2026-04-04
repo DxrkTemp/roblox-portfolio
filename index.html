@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DxrkTempestDev</title>
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,20 +15,51 @@
   <h1>DxrkTempestDev</h1>
   <nav>
     <div class="nav-links" id="navLinks">
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience & Groups</a>
-      <a href="#skills">Skills</a>
-      <a href="#requirements">Requirements</a>
-      <a href="#contact">Contacts</a>
+      <a href="#projects">
+        <i class="fas fa-code"></i>
+        <span>Projects</span>
+      </a>
+      <a href="#experience">
+        <i class="fas fa-briefcase"></i>
+        <span>Experience</span>
+      </a>
+      <a href="#skills">
+        <i class="fas fa-layer-group"></i>
+        <span>Skills</span>
+      </a>
+      <a href="#work">
+        <i class="fas fa-user-tie"></i>
+        <span>Work</span>
+      </a>
+      <a href="#commission">
+        <i class="fas fa-file-contract"></i>
+        <span>Terms</span>
+      </a>
+      <a href="#payment">
+        <i class="fas fa-money-bill"></i>
+        <span>Payment</span>
+      </a>
+      <a href="#contact">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </a>
     </div>
-    <button id="themeToggle"><i class="fas fa-adjust"></i></button>
-    <button id="menuToggle"><i class="fas fa-bars"></i></button>
+    <button id="themeToggle">
+      <i class="fas fa-adjust"></i>
+    </button>
+    <button id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
   </nav>
 </header>
 
 <section class="hero fade-left">
   <h2>Dxrk's Portfolio</h2>
   <p>Lua Scripter • Web App Developer • Front & Back-End Dev</p>
+  <p class="availability">
+    <span class="status available"></span>
+    Available for Full-Time, Part-Time, and Commission Work
+  </p>
   <a href="#contact" class="btn">Hire Me</a>
   <a href="#projects" class="btn secondary-btn">View Projects</a>
 </section>
@@ -58,13 +90,13 @@
 
   <h3 class="category-title"><i class="fas fa-globe"></i> Web Applications</h3>
   <div class="project-grid">
-    <a href="https://threed-stack.onrender.com/" class="card video-card">
+    <a href="https://threed-stack.onrender.com/" class="card">
       <h3>3D Stack Game</h3>
-      <p>3D stacking game built with ThreeJS</p>
+      <p>Built with ThreeJS</p>
     </a>
     <a href="https://trivia-game-w8fl.onrender.com/" class="card">
       <h3>Trivia Quiz App</h3>
-      <p>Interactive trivia game with scoring, question system, and UI logic.</p>
+      <p>Interactive quiz system with scoring</p>
     </a>
   </div>
 </section>
@@ -86,41 +118,91 @@
 <section id="skills" class="fade-left">
   <h2>Skills</h2>
   <div class="skills-grid">
-    <div class="skill"><h4><i class="fas fa-code"></i> Roblox Lua</h4><div class="skill-bar" data-skill="95%"><div style="width:95%"></div></div></div>
-    <div class="skill"><h4><i class="fab fa-cuttlefish"></i> C++</h4><div class="skill-bar" data-skill="85%"><div style="width:85%"></div></div></div>
-    <div class="skill"><h4><i class="fab fa-java"></i> Java</h4><div class="skill-bar" data-skill="80%"><div style="width:80%"></div></div></div>
-    <div class="skill"><h4><i class="fab fa-html5"></i> HTML</h4><div class="skill-bar" data-skill="88%"><div style="width:88%"></div></div></div>
-    <div class="skill"><h4><i class="fab fa-css3-alt"></i> CSS</h4><div class="skill-bar" data-skill="85%"><div style="width:85%"></div></div></div>
-    <div class="skill"><h4><i class="fab fa-js"></i> JavaScript</h4><div class="skill-bar" data-skill="82%"><div style="width:82%"></div></div></div>
-    <div class="skill"><h4><i class="fas fa-cube"></i> Three.js</h4><div class="skill-bar" data-skill="75%"><div style="width:75%"></div></div></div>
-    <div class="skill"><h4><i class="fab fa-node-js"></i> Node.js</h4><div class="skill-bar" data-skill="70%"><div style="width:70%"></div></div></div>
+    <div class="skill"><h4>Roblox Lua <span class="exp">4 years</span></h4><div class="skill-bar"><div style="width:80%"></div></div></div>
+    <div class="skill"><h4>C++ <span class="exp">1 year</span></h4><div class="skill-bar"><div style="width:35%"></div></div></div>
+    <div class="skill"><h4>Java <span class="exp">1 year</span></h4><div class="skill-bar"><div style="width:35%"></div></div></div>
+    <div class="skill"><h4>HTML <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
+    <div class="skill"><h4>CSS <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
+    <div class="skill"><h4>JavaScript <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
+    <div class="skill"><h4>Three.js <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
+    <div class="skill"><h4>Node.js <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
   </div>
 </section>
 
-<section id="requirements" class="fade-left">
-  <h2>Project Requirements & Payment</h2>
+<section id="work" class="fade-left">
+  <h2>Work Type</h2>
   <div class="project-grid">
     <div class="card">
-      <h3>Big Projects</h3>
-      <p>For big projects, I need upfront payment before I start. Message me to talk about it.</p>
+      <h3>Full-Time</h3>
+      <p>Long-term collaboration focused on building systems, maintaining projects, and delivering consistent updates.</p>
+      <ul class="work-rules">
+        <li>First week must be paid upfront before starting</li>
+        <li>After that, payments continue on a weekly or monthly basis</li>
+        <li>Billing is paused if no work is assigned</li>
+      </ul>
     </div>
     <div class="card">
-      <h3>Small Tasks</h3>
-      <p>For small tasks, pay after it's done. Contact me on Discord or Roblox.</p>
+      <h3>Part-Time</h3>
+      <p>Flexible support for existing projects, including improvements, bug fixes, and feature development.</p>
+      <ul class="work-rules">
+        <li>Small tasks: Payment after completion</li>
+        <li>Larger tasks: 50% upfront required</li>
+        <li>Milestone or weekly payments available for ongoing work</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Commission</h3>
+      <p>One-time scripting, systems, UI development, or bug fixes tailored to your project's needs.</p>
+      <ul class="work-rules">
+        <li>50% upfront before work begins</li>
+        <li>Progress updates or previews will be provided</li>
+        <li>Final product delivered after full payment</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section id="requirements" class="fade-left">
-  <h2>Payment Method</h2>
+<section id="commission" class="fade-left">
+  <h2>Commission Terms</h2>
+  <div class="project-grid">
+    <div class="card">
+      <h3>Payment Structure</h3>
+      <ul class="work-rules">
+        <li>50% upfront is required before starting any work</li>
+        <li>Remaining 50% must be completed before final delivery</li>
+        <li>Full scripts/files are only sent after full payment</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Client Responsibilities</h3>
+      <ul class="work-rules">
+        <li>Provide clear instructions and all required assets</li>
+        <li>Maintain communication during development</li>
+        <li>Delays in response may affect delivery time</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Notes</h3>
+      <ul class="work-rules">
+        <li>No refunds after work has started</li>
+        <li>Minor revisions are allowed after delivery</li>
+        <li>Major changes may require additional payment</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">By commissioning, you agree to the terms listed above.</p>
+</section>
+
+<section id="payment" class="fade-left">
+  <h2>Payment Methods</h2>
   <div class="project-grid">
     <div class="card">
       <h3>Robux</h3>
-      <p>You can pay with Robux by buying a Gamepass on Roblox.</p>
+      <p>Via Gamepass or Shirt or T-Shirt.</p>
     </div>
     <div class="card">
       <h3>USD</h3>
-      <p>For USD, I accept PayPal only.</p>
+      <p>Via PayPal.</p>
     </div>
   </div>
 </section>
@@ -128,9 +210,8 @@
 <section id="contact" class="fade-right">
   <h2>Contacts</h2>
   <div class="contact-links">
-    <a href="https://discord.com/users/535782741988343808" target="_blank">
-      <i class="fab fa-discord"></i>
-      temp3stdev
+    <a href="https://discord.com/users/535782741988343808">
+      <i class="fab fa-discord"></i> temp3stdev
     </a>
     <a href="https://www.roblox.com/users/3575659020/profile">
       <img class="roblox-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
@@ -144,6 +225,5 @@
 </footer>
 
 <script src="main.js"></script>
-
 </body>
 </html>
