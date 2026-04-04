@@ -15,7 +15,6 @@ if (localStorage.getItem("theme") === "light") {
   document.body.classList.add("light-theme");
 }
 
-// ✅ FADE IN + OUT (LEFT & RIGHT)
 const elements = document.querySelectorAll(".fade-left, .fade-right");
 
 const observer = new IntersectionObserver((entries) => {
@@ -50,17 +49,21 @@ document.querySelectorAll(".video-card").forEach(card => {
   });
 });
 
-// ✅ MOBILE MENU
 const menuBtn = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.onclick = () => {
-  navLinks.classList.toggle("active");
-};
+menuBtn.addEventListener("click", () => {
 
-// Close on click
+  navLinks.classList.toggle("active");
+
+});
+
 document.querySelectorAll(".nav-links a").forEach(link => {
+
   link.addEventListener("click", () => {
+
     navLinks.classList.remove("active");
+
   });
+
 });
