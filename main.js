@@ -1,4 +1,3 @@
-// Theme toggle
 const themeBtn = document.getElementById("themeToggle");
 
 themeBtn.onclick = () => {
@@ -10,7 +9,6 @@ themeBtn.onclick = () => {
   );
 };
 
-// Load theme
 if (localStorage.getItem("theme") === "light") {
   document.body.classList.add("light-theme");
 }
@@ -29,7 +27,6 @@ const observer = new IntersectionObserver((entries) => {
 
 elements.forEach(el => observer.observe(el));
 
-// Skill bars
 window.addEventListener("load", () => {
   document.querySelectorAll(".skill-bar").forEach(bar => {
     const fill = document.createElement("div");
