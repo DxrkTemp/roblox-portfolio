@@ -23,6 +23,7 @@
 
 <header>
   <h1>DxrkTempestDev</h1>
+
   <nav>
     <div class="nav-links" id="navLinks">
       <a href="#projects"><i class="fas fa-code"></i><span>Projects</span></a>
@@ -34,18 +35,25 @@
       <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
     </div>
 
-    <button id="themeToggle"><i class="fas fa-adjust"></i></button>
-    <button id="menuToggle"><i class="fas fa-bars"></i></button>
+    <button id="themeToggle">
+      <i class="fas fa-adjust"></i>
+    </button>
+
+    <button id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
   </nav>
 </header>
 
 <section class="hero fade-left">
   <h2>Dxrk's Portfolio</h2>
   <p>Lua Scripter • Web App Developer • Front & Back-End Dev</p>
+
   <p class="availability">
     <span class="status available"></span>
     Available for Full-Time, Part-Time, and Commission Work
   </p>
+
   <a href="#contact" class="btn">Hire Me</a>
   <a href="#projects" class="btn secondary-btn">View Projects</a>
 </section>
@@ -53,9 +61,11 @@
 <section id="projects" class="fade-left">
   <h2>Featured Projects</h2>
 
-  <h3 class="category-title"><i class="fas fa-gamepad"></i> Roblox Projects</h3>
-  <div class="project-grid">
+  <h3 class="category-title">
+    <i class="fas fa-gamepad"></i> Roblox Projects
+  </h3>
 
+  <div class="project-grid">
     <a href="https://www.roblox.com/games/11676465042/Blast-Simulator" class="card video-card">
       <div class="video-container">
         <video muted loop playsinline>
@@ -75,35 +85,48 @@
       <h3>Jump a Glass for Brainrot</h3>
       <p>A Brainrot game</p>
     </a>
-
   </div>
 
-  <h3 class="category-title"><i class="fas fa-cogs"></i> Roblox Systems</h3>
+  <h3 class="category-title">
+    <i class="fab fa-discord"></i> Discord Bot Projects
+  </h3>
+
   <div class="project-grid">
+    <div class="card bot-card">
+      <h3>Discord Verification Bot</h3>
 
-    <a href="#" class="card video-card">
-      <div class="video-container">
-        <video muted loop playsinline>
-          <source src="LuckyBlock.mp4">
-        </video>
+      <p class="bot-description">
+        This custom Discord verification bot securely links Discord accounts with
+        Roblox accounts before granting access to protected in-game systems,
+        interfaces, rewards, or exclusive content.
+
+        Users must complete verification through Discord before accessing
+        restricted game features.
+
+        To strengthen security, each Discord account can only be linked to one
+        Roblox account at a time, significantly reducing alt-account abuse,
+        exploiters, and fraudulent reward claims.
+
+        This system is especially valuable for games offering Free UGC rewards,
+        limited-time rewards, and progression-based unlockables where account
+        authenticity is essential.
+      </p>
+
+      <div class="bot-gallery">
+        <img src="image1.png" alt="Bot Screenshot 1">
+        <img src="image2.png" alt="Bot Screenshot 2">
+        <img src="image3.png" alt="Bot Screenshot 3">
+        <img src="image4.png" alt="Bot Screenshot 4">
+        <img src="image5.png" alt="Bot Screenshot 5">
+        <img src="image6.png" alt="Bot Screenshot 6">
       </div>
-      <h3>Open Lucky Block / Crate System</h3>
-      <p>Lucky Block / Crate System with Rarity & Animation</p>
-    </a>
-
-    <a href="#" class="card video-card">
-      <div class="video-container">
-        <video muted loop playsinline>
-          <source src="ClaimReward.mp4">
-        </video>
-      </div>
-      <h3>Reward System</h3>
-      <p>Animated UI Reward System</p>
-    </a>
-
+    </div>
   </div>
 
-  <h3 class="category-title"><i class="fas fa-globe"></i> Web Applications</h3>
+  <h3 class="category-title">
+    <i class="fas fa-globe"></i> Web Applications
+  </h3>
+
   <div class="project-grid">
     <a href="https://threed-stack.onrender.com/" class="card">
       <h3>3D Stack Game</h3>
@@ -119,6 +142,7 @@
 
 <section id="experience" class="fade-right">
   <h2>Experience & Groups</h2>
+
   <div class="project-grid">
     <a href="https://www.roblox.com/communities/33750097/Generation-Z-Studio" class="card">
       <h3>Generation Z Studio</h3>
@@ -134,15 +158,16 @@
 
 <section id="skills" class="fade-left">
   <h2>Skills</h2>
+
   <div class="skills-grid">
-    <div class="skill"><h4>Roblox Lua <span class="exp">4 years</span></h4><div class="skill-bar"><div style="width:80%"></div></div></div>
-    <div class="skill"><h4>C++ <span class="exp">1 year</span></h4><div class="skill-bar"><div style="width:35%"></div></div></div>
-    <div class="skill"><h4>Java <span class="exp">1 year</span></h4><div class="skill-bar"><div style="width:35%"></div></div></div>
-    <div class="skill"><h4>HTML <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
-    <div class="skill"><h4>CSS <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
-    <div class="skill"><h4>JavaScript <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
-    <div class="skill"><h4>Three.js <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
-    <div class="skill"><h4>Node.js <span class="exp">2 years</span></h4><div class="skill-bar"><div style="width:50%"></div></div></div>
+    <div class="skill"><h4>Roblox Lua <span class="exp">4 years</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>C++ <span class="exp">1 year</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>Java <span class="exp">1 year</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>HTML <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>CSS <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>JavaScript <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>ThreeJS <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>NodeJS <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
   </div>
 </section>
 
@@ -240,6 +265,17 @@
 <footer>
   <p>© DxrkTempestDev</p>
 </footer>
+
+<footer>
+  <p>© DxrkTempestDev</p>
+</footer>
+
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <button class="modal-btn prev-btn">&#10094;</button>
+  <img id="modalImage" src="" alt="Preview">
+  <button class="modal-btn next-btn">&#10095;</button>
+</div>
 
 <script src="main.js"></script>
 </body>
