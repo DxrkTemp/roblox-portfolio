@@ -382,6 +382,116 @@ footer {
   border-radius:8px;
 }
 
+.category-title {
+  margin: 35px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-title i {
+  color: #5865f2;
+}
+
+.bot-card {
+  padding: 24px;
+}
+
+.bot-description {
+  color: #9da6af;
+  line-height: 1.8;
+  margin-top: 12px;
+}
+
+.bot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.bot-gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bot-gallery img:hover {
+  transform: scale(1.04);
+  border-color: #5865f2;
+  box-shadow: 0 8px 25px rgba(88,101,242,0.25);
+}
+
+body.light-theme .bot-description {
+  color: #444;
+}
+
+body.light-theme .bot-gallery img {
+  border: 1px solid #ddd;
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+.image-modal.show {
+  display: flex;
+}
+
+#modalImage {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 42px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+.modal-btn {
+  position: absolute;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.25s;
+}
+
+.modal-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.prev-btn {
+  left: 25px;
+}
+
+.next-btn {
+  right: 25px;
+}
+
 @media (max-width:1200px){
 
   header{
@@ -394,6 +504,21 @@ footer {
 
   .nav-links span{
     font-size:14px;
+  }
+
+  .bot-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  }
+
+  .modal-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .close-modal {
+    font-size: 34px;
   }
 
 }
@@ -424,6 +549,22 @@ footer {
     padding:70px 30px;
   }
 
+  .bot-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  }
+
+  .modal-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .close-modal {
+    font-size: 34px;
+  }
+
+
 }
 
 @media (max-width:900px){
@@ -435,6 +576,22 @@ footer {
   .nav-links i{
     font-size:18px;
   }
+
+  .bot-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  }
+
+  .modal-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .close-modal {
+    font-size: 34px;
+  }
+
 
 }
 
@@ -518,6 +675,22 @@ footer {
     padding:60px 20px;
   }
 
+  .bot-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  }
+
+  .modal-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .close-modal {
+    font-size: 34px;
+  }
+
+
 }
 
 @media (max-width:480px){
@@ -548,6 +721,22 @@ footer {
     font-size:18px;
   }
 
+  .bot-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  }
+
+  .modal-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .close-modal {
+    font-size: 34px;
+  }
+
+
 }
 
 @media (max-width:360px){
@@ -555,5 +744,21 @@ footer {
   .hero h2{
     font-size:22px;
   }
+
+  .bot-gallery {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  }
+
+  .modal-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .close-modal {
+    font-size: 34px;
+  }
+
 
 }
