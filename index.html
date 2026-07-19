@@ -3,63 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-19JRZKG21M"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-19JRZKG21M');
-  </script>
-
-  <title>DxrkTempestDev</title>
+  <title>DxrkTempestDev — Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
 </head>
-
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <header>
-  <h1>DxrkTempestDev</h1>
-
-  <nav>
-    <div class="nav-links" id="navLinks">
-      <a href="#projects"><i class="fas fa-code"></i><span>Projects</span></a>
-      <a href="#experience"><i class="fas fa-briefcase"></i><span>Experience</span></a>
-      <a href="#skills"><i class="fas fa-layer-group"></i><span>Skills</span></a>
-      <a href="#work"><i class="fas fa-user-tie"></i><span>Work</span></a>
-      <a href="#commission"><i class="fas fa-file-contract"></i><span>Terms</span></a>
-      <a href="#payment"><i class="fas fa-money-bill"></i><span>Payment</span></a>
-      <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+  <div class="titlebar">
+    <div class="tl-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+    <span class="tl-path"><i class="fas fa-code"></i> dxrktempestdev</span>
+    <div class="tl-actions">
+      <button id="cmdBtn" title="Jump to section (Ctrl/Cmd+K)"><i class="fas fa-magnifying-glass"></i><kbd>Search</kbd></button>
+      <button id="themeToggle" title="Toggle theme"><i class="fas fa-circle-half-stroke"></i></button>
+      <button id="menuToggle" title="Toggle files"><i class="fas fa-bars"></i></button>
     </div>
+  </div>
 
-    <button id="themeToggle">
-      <i class="fas fa-adjust"></i>
-    </button>
-
-    <button id="menuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
+  <nav class="tabbar" id="navLinks" aria-label="Sections">
+    <a href="#projects" class="tab" data-section="projects"><span class="tab-dot tsx"></span>projects<span class="tab-ext"></span></a>
+    <a href="#experience" class="tab" data-section="experience"><span class="tab-dot json"></span>experience<span class="tab-ext"></span></a>
+    <a href="#skills" class="tab" data-section="skills"><span class="tab-dot yml"></span>skills<span class="tab-ext"></span></a>
+    <a href="#work" class="tab" data-section="work"><span class="tab-dot md"></span>work<span class="tab-ext"></span></a>
+    <a href="#commission" class="tab" data-section="commission"><span class="tab-dot md"></span>terms<span class="tab-ext"></span></a>
+    <a href="#payment" class="tab" data-section="payment"><span class="tab-dot yml"></span>payment<span class="tab-ext"></span></a>
+    <a href="#contact" class="tab" data-section="contact"><span class="tab-dot sh"></span>contact<span class="tab-ext"></span></a>
   </nav>
+
+  <div class="scroll-progress"><div id="scrollProgressBar"></div></div>
 </header>
 
-<section class="hero fade-left">
-  <h2>Dxrk's Portfolio</h2>
-  <p>Lua Scripter • Web App Developer • Front & Back-End Dev</p>
+<div id="cmdPalette" class="cmd-palette" role="dialog" aria-modal="true" aria-label="Jump to section">
+  <div class="cmd-palette-box">
+    <div class="cmd-input-row">
+      <i class="fas fa-magnifying-glass"></i>
+      <input id="cmdInput" type="text" placeholder="Jump to a section..." autocomplete="off">
+      <kbd>esc</kbd>
+    </div>
+    <ul id="cmdList" class="cmd-list"></ul>
+  </div>
+</div>
 
-  <p class="availability">
-    <span class="status available"></span>
-    Available for Full-Time, Part-Time, and Commission Work
-  </p>
+<main id="main">
 
-  <a href="#contact" class="btn">Hire Me</a>
-  <a href="#projects" class="btn secondary-btn">View Projects</a>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">whoami.lua</span>
+      </div>
+      <pre class="terminal-body"><code id="typedCode"></code><span class="cursor">&#9608;</span></pre>
+    </div>
+
+    <div class="hero-copy">
+      <p class="eyebrow"></p>
+      <h2>I build the systems<br>behind the game.</h2>
+      <p class="hero-sub">Four years scripting Roblox back-ends, plus front-to-back web apps. I take on full-time, part-time, and one-off commission work.</p>
+
+      <p class="availability">
+        <span class="status available"></span>
+        Available for hire
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary"><span class="prompt">&gt;</span>Hire Me </a>
+        <a href="#projects" class="btn btn-secondary"><span class="prompt">&gt;</span>View Projects</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="projects" class="fade-left">
-  <h2>Featured Projects</h2>
+<section id="projects" class="file-block fade-left">
+  <div class="file-head"><span class="line-no">01</span><h2>projects<span class="file-ext"></span></h2></div>
 
   <h3 class="category-title">
     <i class="fas fa-gamepad"></i> Roblox Projects
@@ -68,22 +89,24 @@
   <div class="project-grid">
     <a href="https://www.roblox.com/games/11676465042/Blast-Simulator" class="card video-card">
       <div class="video-container">
-        <video muted loop playsinline>
+        <video muted loop playsinline preload="none">
           <source src="Blast-Simulator.mp4">
         </video>
       </div>
       <h3>Blast Simulator</h3>
       <p>A physics simulator game</p>
+      <span class="badge badge-live"><span class="badge-dot"></span>Live on Roblox</span>
     </a>
 
     <a href="https://www.roblox.com/games/82963506483555/Jump-a-Glass-for-Brainrots" class="card video-card">
       <div class="video-container">
-        <video muted loop playsinline>
+        <video muted loop playsinline preload="none">
           <source src="Brainrot.mp4">
         </video>
       </div>
       <h3>Jump a Glass for Brainrot</h3>
       <p>A Brainrot game</p>
+      <span class="badge badge-live"><span class="badge-dot"></span>Live on Roblox</span>
     </a>
   </div>
 
@@ -96,20 +119,24 @@
       <h3>Discord Verification Bot</h3>
 
       <p class="bot-description">
-        This multi-purpose Discord bot is built for Roblox-based communities, combining secure account verification with event management and automated announcement systems.
-      
-        It links Discord and Roblox accounts through a verification system to control access to in-game features such as GUIs, rewards, and exclusive content. Each Discord account is limited to one Roblox account to reduce alt abuse and maintain fair usage, making it ideal for Free UGC and progression-based systems.
-      
-        The bot also includes staff tools for managing events and releases, including collection scheduling, limited item drops, scavenger hunts, affiliate announcements, and user verification.
+        This custom verification bot links Discord accounts to Roblox accounts before
+        granting access to protected in-game systems, interfaces, rewards, or exclusive
+        content. Users verify through Discord before restricted game features unlock.
+      </p>
+      <p class="bot-description">
+        Each Discord account can only be linked to one Roblox account at a time, which
+        cuts down alt-account abuse, exploiters, and fraudulent reward claims — useful
+        for games running free UGC rewards, limited-time drops, or progression-based
+        unlockables where account authenticity matters.
       </p>
 
       <div class="bot-gallery">
-        <img src="image1.png" alt="Bot Screenshot 1">
-        <img src="image2.png" alt="Bot Screenshot 2">
-        <img src="image3.png" alt="Bot Screenshot 3">
-        <img src="image4.png" alt="Bot Screenshot 4">
-        <img src="image5.png" alt="Bot Screenshot 5">
-        <img src="image6.png" alt="Bot Screenshot 6">
+        <img src="image1.png" alt="Bot Screenshot 1" loading="lazy">
+        <img src="image2.png" alt="Bot Screenshot 2" loading="lazy">
+        <img src="image3.png" alt="Bot Screenshot 3" loading="lazy">
+        <img src="image4.png" alt="Bot Screenshot 4" loading="lazy">
+        <img src="image5.png" alt="Bot Screenshot 5" loading="lazy">
+        <img src="image6.png" alt="Bot Screenshot 6" loading="lazy">
       </div>
     </div>
   </div>
@@ -122,116 +149,121 @@
     <a href="https://threed-stack.onrender.com/" class="card">
       <h3>3D Stack Game</h3>
       <p>Built with ThreeJS</p>
+      <span class="badge badge-live"><span class="badge-dot"></span>Live demo</span>
     </a>
 
     <a href="https://trivia-game-w8fl.onrender.com/" class="card">
       <h3>Trivia Quiz App</h3>
       <p>Interactive quiz system with scoring</p>
+      <span class="badge badge-live"><span class="badge-dot"></span>Live demo</span>
     </a>
   </div>
 </section>
 
-<section id="experience" class="fade-right">
-  <h2>Experience & Groups</h2>
+<section id="experience" class="file-block fade-right">
+  <div class="file-head"><span class="line-no">02</span><h2>experience<span class="file-ext"></span></h2></div>
 
   <div class="project-grid">
     <a href="https://www.roblox.com/communities/33750097/Generation-Z-Studio" class="card">
       <h3>Generation Z Studio</h3>
-      <p>Front & Back End Scripter</p>
+      <p>Front &amp; Back End Scripter</p>
     </a>
 
     <a href="https://www.roblox.com/communities/6034947/Cats-Rebooted" class="card">
       <h3>Cat_Rebooted</h3>
-      <p>Project Manager & Scripter</p>
+      <p>Project Manager &amp; Scripter</p>
     </a>
   </div>
 </section>
 
-<section id="skills" class="fade-left">
-  <h2>Skills</h2>
+<section id="skills" class="file-block fade-left">
+  <div class="file-head"><span class="line-no">03</span><h2>skills<span class="file-ext"></span></h2></div>
 
   <div class="skills-grid">
     <div class="skill"><h4>Roblox Lua <span class="exp">4 years</span></h4><div class="skill-bar"></div></div>
-    <div class="skill"><h4>C++ <span class="exp">1 year</span></h4><div class="skill-bar"></div></div>
-    <div class="skill"><h4>Java <span class="exp">1 year</span></h4><div class="skill-bar"></div></div>
     <div class="skill"><h4>HTML <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
     <div class="skill"><h4>CSS <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
     <div class="skill"><h4>JavaScript <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
     <div class="skill"><h4>ThreeJS <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
     <div class="skill"><h4>NodeJS <span class="exp">2 years</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>C++ <span class="exp">1 year</span></h4><div class="skill-bar"></div></div>
+    <div class="skill"><h4>Java <span class="exp">1 year</span></h4><div class="skill-bar"></div></div>
   </div>
 </section>
 
-<section id="work" class="fade-left">
-  <h2>Work Type</h2>
+<section id="work" class="file-block fade-left">
+  <div class="file-head"><span class="line-no">04</span><h2>work<span class="file-ext"></span></h2></div>
+
   <div class="project-grid">
     <div class="card">
       <h3>Full-Time</h3>
-      <p>Long-term collaboration focused on building systems, maintaining projects, and delivering consistent updates.</p>
+      <p>Long-term collaboration: building systems, maintaining projects, delivering consistent updates.</p>
       <ul class="work-rules">
-        <li>First week must be paid upfront before starting</li>
-        <li>After that, payments continue on a weekly or monthly basis</li>
-        <li>Billing is paused if no work is assigned</li>
+        <li>First week paid upfront before starting</li>
+        <li>After that, weekly or monthly billing</li>
+        <li>Billing pauses if no work is assigned</li>
       </ul>
     </div>
     <div class="card">
       <h3>Part-Time</h3>
-      <p>Flexible support for existing projects, including improvements, bug fixes, and feature development.</p>
+      <p>Flexible support for existing projects — improvements, bug fixes, feature work.</p>
       <ul class="work-rules">
-        <li>Small tasks: Payment after completion</li>
-        <li>Larger tasks: 50% upfront required</li>
-        <li>Milestone or weekly payments available for ongoing work</li>
+        <li>Small tasks: pay after completion</li>
+        <li>Larger tasks: 50% upfront</li>
+        <li>Milestone or weekly payments for ongoing work</li>
       </ul>
     </div>
     <div class="card">
       <h3>Commission</h3>
-      <p>One-time scripting, systems, UI development, or bug fixes tailored to your project's needs.</p>
+      <p>One-time scripting, systems, UI, or bug fixes built to your project's spec.</p>
       <ul class="work-rules">
         <li>50% upfront before work begins</li>
-        <li>Progress updates or previews will be provided</li>
-        <li>Final product delivered after full payment</li>
+        <li>Progress updates or previews along the way</li>
+        <li>Final files delivered after full payment</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section id="commission" class="fade-left">
-  <h2>Commission Terms</h2>
+<section id="commission" class="file-block fade-left">
+  <div class="file-head"><span class="line-no">05</span><h2>terms<span class="file-ext"></span></h2></div>
+
   <div class="project-grid">
     <div class="card">
       <h3>Payment Structure</h3>
       <ul class="work-rules">
-        <li>50% upfront is required before starting any work</li>
-        <li>Remaining 50% must be completed before final delivery</li>
-        <li>Full scripts/files are only sent after full payment</li>
+        <li>50% upfront required before starting any work</li>
+        <li>Remaining 50% due before final delivery</li>
+        <li>Full scripts and files sent only after full payment</li>
       </ul>
     </div>
     <div class="card">
       <h3>Client Responsibilities</h3>
       <ul class="work-rules">
         <li>Provide clear instructions and all required assets</li>
-        <li>Maintain communication during development</li>
-        <li>Delays in response may affect delivery time</li>
+        <li>Stay reachable during development</li>
+        <li>Slow responses may push back delivery</li>
       </ul>
     </div>
     <div class="card">
       <h3>Notes</h3>
       <ul class="work-rules">
-        <li>No refunds after work has started</li>
-        <li>Minor revisions are allowed after delivery</li>
-        <li>Major changes may require additional payment</li>
+        <li>No refunds once work has started</li>
+        <li>Minor revisions included after delivery</li>
+        <li>Major changes may cost extra</li>
       </ul>
     </div>
   </div>
-  <p class="note">By commissioning, you agree to the terms listed above.</p>
+  <p class="note"><i class="fas fa-triangle-exclamation"></i> By commissioning, you agree to the terms above.</p>
 </section>
 
-<section id="payment" class="fade-left">
-  <h2>Payment Methods</h2>
+<section id="payment" class="file-block fade-left">
+  <div class="file-head"><span class="line-no">06</span><h2>payment<span class="file-ext"></span></h2></div>
+
   <div class="project-grid">
     <div class="card">
       <h3>Robux</h3>
-      <p>Via Gamepass or Shirt or T-Shirt.</p>
+      <p>Via Gamepass or Shirt / T-Shirt.</p>
     </div>
     <div class="card">
       <h3>USD</h3>
@@ -240,28 +272,41 @@
   </div>
 </section>
 
-<section id="contact" class="fade-right">
-  <h2>Contacts</h2>
+<section id="contact" class="file-block fade-right">
+  <div class="file-head"><span class="line-no">07</span><h2>contact<span class="file-ext"></span></h2></div>
+
   <div class="contact-links">
-    <a href="https://discord.com/users/535782741988343808">
-      <i class="fab fa-discord"></i> temp3stdev
-    </a>
-    <a href="https://www.roblox.com/users/3575659020/profile">
-      <img class="roblox-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg">
+    <div class="contact-row">
+      <a href="https://discord.com/users/535782741988343808" class="contact-link">
+        <i class="fab fa-discord"></i> temp3stdev
+      </a>
+      <button class="copy-btn" data-copy="temp3stdev" title="Copy Discord username" aria-label="Copy Discord username">
+        <i class="fas fa-copy"></i>
+      </button>
+    </div>
+    <a href="https://www.roblox.com/users/3575659020/profile" class="contact-link">
+      <img class="roblox-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" alt="">
       Roblox Profile
     </a>
   </div>
 </section>
+
+</main>
+
+<div class="statusbar">
+  <span class="statusbar-left"><i class="fas fa-code-branch"></i> main <span class="sb-sep">|</span> <span id="statusSection">hero</span></span>
+  <span class="statusbar-right"><span class="status-dot available"></span>Available for hire</span>
+</div>
 
 <footer>
   <p>© DxrkTempestDev</p>
 </footer>
 
 <div id="imageModal" class="image-modal">
-  <span class="close-modal">&times;</span>
-  <button class="modal-btn prev-btn">&#10094;</button>
+  <button class="close-modal" aria-label="Close preview">&times;</button>
+  <button class="modal-btn prev-btn" aria-label="Previous image">&#10094;</button>
   <img id="modalImage" src="" alt="Preview">
-  <button class="modal-btn next-btn">&#10095;</button>
+  <button class="modal-btn next-btn" aria-label="Next image">&#10095;</button>
 </div>
 
 <script src="main.js"></script>
